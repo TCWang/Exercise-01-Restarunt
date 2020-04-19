@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>習題一: 來碗拉麵</title>
+    <style>
+        .btn-cart {
+            background-color: transparent;
+            position: relative;
+        }
+        .badge {
+            position:abslute;
+            top: -1px;
+            right: 5px;
+        }
+        .jumbotron-bg {
+            background-image: url(figure/fig-02-02.jpg);
+            background-size: cover;
+            background-position: center center;
+            min-height: 300px
+        }
+        .box-shadow {
+            box-shadow: 0 5px 10px rgba(0,0,0,0.16);
+            transition: box-shadow .3s;
+        }
+        .box-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+        }
+        .bg-lighter {
+            background-color: rgba(0,0,0,.4)
+        }
+        .header-carousel-item {
+            height: 250px;
+        }
+        .carousel-caption {
+            backgound-color: rgba(0,0,0,.6);
+        }
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+        .carousel-caption {
+            background-color: rgba(0,0,0,.4)
+        }
+        @media (min-width:768px) {
+          .text-md-dark {
+            color: #333;
+        }
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!-- Navigation Bar -->
+<div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#805173">
+        <a class="navbar-brand" href="#">來碗拉麵</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>     
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-1">
+                <a class="nav-link" href="index.html">首頁 </a>
+                </li>
+                <li class="nav-item mr-1">
+                    <a class="nav-link active" href="HEX-Restaurant-Ex01-B.html" >菜單</a>
+                </li>
+                <li class="nav-item dropdown mr-1">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  分店
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="HEX-Restaurant-Ex01-C1.html">桃園林口店</a>
+                  <a class="dropdown-item" href="HEX-Restaurant-Ex01-C2.html">嘉義朴子店</a>
+                  <a class="dropdown-item" href="HEX-Restaurant-Ex01-C3.html">台南崇德店</a>
+                  <a class="dropdown-item" href="HEX-Restaurant-Ex01-C4.html">高雄仁武店</a>
+                  </div>
+              </li>
+                <li class="nav-item mr-1">
+                    <a class="nav-link" href="HEX-Restaurant-Ex01-D.html">登入</a>
+                </li>
+                <li class="nav-item mr-1">
+                    <a class="nav-link" href="HEX-Restaurant-Ex01-D.html">註冊</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-ca" data-toggle="dropdown" data-flip="false">
+                            <i class="fa fa-shopping-cart text-white fa-2x" aria-hidden="true"></i>
+                            <span class="badge badge-pill badge-danger">12</span>
+                        </button>
+                    </div>
+
+                </li>            
+            </ul>
+        </div>
+      </nav>
+
+<!-- Jumbotron-->
+    <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-3">
+                <h4 class=" text-white" >多樣化拉麵餐點選擇</h4>
+                <p class="lead text-white">請依據餐點類別，點選各項餐飲</p>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Grid Card-->    
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="list-group sticky-top" id="MenuList" role="tablist">
+                <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">豚骨拉麵系列</a>
+                <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">紅燒牛肉湯系列</a>
+                <a href="#Menu-B3" class="list-group-item list-group-item-action" data-toggle="list">鍋燒系列</a>
+                <a href="#Menu-B4" class="list-group-item list-group-item-action" data-toggle="list">乾拌拉麵系列</a>
+              </div>
+
+        </div>
+        <div class="col-md-9">
+
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="Menu-B1" role="tabpanel">
+                    <!-- Menu B1 -->
+                    <div class="row mb-5">
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-101.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">叉燒拉麵</h5>
+                                <p class="card-text">NT$75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-102.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">蔬菜拉麵</h5>
+                                <p class="card-text">NT$75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-103.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">醬油叉燒拉麵</h5>
+                                <p class="card-text">NT$80</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-104.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">麻辣叉燒拉麵</h5>
+                                <p class="card-text">NT80</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-105.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">咖哩叉燒拉麵</h5>
+                                <p class="card-text">NT$80</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-106.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">沙茶叉燒拉麵</h5>
+                                <p class="card-text">NT$80</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="Menu-B2" role="tabpanel">
+                    <!-- Menu B2 -->
+                    <div class="row mb-5">
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-201.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">紅燒牛肉拉麵</h5>
+                                <p class="card-text">NT$90</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-202.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">麻辣牛肉拉麵</h5>
+                                <p class="card-text">NT$95</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-203.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">牛肉湯拉麵</h5>
+                                <p class="card-text">NT$６0</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="Menu-B3" role="tabpanel">
+                    <!-- Menu B3 -->
+                    <div class="row mb-5">
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-301.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">原味鍋燒</h5>
+                                <p class="card-text">NT$６5</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-302.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">沙茶鍋燒</h5>
+                                <p class="card-text">NT$70</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-303.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">味噌鍋燒</h5>
+                                <p class="card-text">NT$70</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="Menu-B4" role="tabpanel">
+                    <!-- Menu B4 -->
+                    <div class="row mb-5">
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-401.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">紅燒牛肉拌麵</h5>
+                                <p class="card-text">NT$85</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-402.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">麻辣牛肉拌麵</h5>
+                                <p class="card-text">NT$95</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-403.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">麻辣叉燒拌麵</h5>
+                                <p class="card-text">NT$75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-404.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">咖哩叉燒拌麵</h5>
+                                <p class="card-text">NT75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-405.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">奶油叉燒拌麵</h5>
+                                <p class="card-text">NT$75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card box-shadow text-center h-100">
+                                <img src="figure3/fig-406.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">沙茶叉燒拌麵</h5>
+                                <p class="card-text">NT$75</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="#" class="btn btn-outline-secondary">+<a>
+                                        <a href="#" class="btn btn-outline-secondary">&nbsp;&nbsp;0&nbsp;&nbsp;</a>
+                                        <a href="#" class="btn btn-outline-secondary">-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+<!--  footer -->
+      <footer class="bg-light text-muted py-5">
+        <div class="container">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">© Copright 2020 TCWBlog</li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">
+                        <i class="fab fa-instagram"></i>
+                        Instagrame
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">
+                        About
+                    </a>
+                </li>
+            </ul>
+            <p class="text-center">Made with Bootstrap4</p>
+        </div>
+    </footer>  
+
+</div>
+
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
+</body>
+</html>
